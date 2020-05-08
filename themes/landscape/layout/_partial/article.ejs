@@ -1,0 +1,63 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <%- partial('post/category') %>
+  </div>
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+	
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <footer class="article-footer">
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+      <% if (post.comments && config.disqus_shortname){ %>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+      <% } %>
+	  
+	 
+	  
+      <%- partial('post/tag') %>
+	  
+    </footer>
+  </div>
+
+</article>
+
+<!--使用valine插件做评论系统 + leancloud存储评论-->
+<% if (!index){ %>
+  <% if (post.comments){ %>
+    <div id="vcomments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'GKXpn9T6BfC6PrilvD0U2NV6-gzGzoHsz',
+            appKey: 'yNoAcJhKhUBz21HU2D9Dpp6R',
+            notify:false, 
+            verify:true, 
+            visitor:true,
+            avatar:'mm', 
+            placeholder: '在这里留言...' 
+        })
+    </script>
+  <% } else { %>
+    <div class="vcomments"></div>
+  <% } %>
+<% } %>
+
