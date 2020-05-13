@@ -96,3 +96,5 @@ ANTLR是一个神器，关于ANTLR的入门教程：
 
 [ https://gitee.com/jeavenwong/SimpleJInterpreter/tree/master ]( https://gitee.com/jeavenwong/SimpleJInterpreter/tree/master )
 
+我又基于 ANTLR 实现了四则运算的第二版，果然 ANTLR 这款 parser 生成器配合 Vistor 以及 Listener 两种 Parser Tree 的遍历方式很强大，还能够直接处理 LL(*) 文法的左递归。下面是第二版的源码仓库链接。
+[https://gitee.com/jeavenwong/SimpleJInterpreterV2](https://gitee.com/jeavenwong/SimpleJInterpreterV2)  
