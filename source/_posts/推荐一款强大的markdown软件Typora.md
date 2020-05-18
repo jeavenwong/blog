@@ -6,6 +6,8 @@
 
 > Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
 
+<!-- more -->
+
 百度翻译下
 
 > Typora给你一个读者和作家的无缝体验。它删除了预览窗口、模式切换程序、标记源代码的语法符号以及所有其他不必要的干扰。相反，它提供了一个真正的实时预览功能，帮助您专注于内容本身。
@@ -28,48 +30,39 @@ Typora 作为 markdown 的编辑器当然支持完善的 markdown 的语法，�
 
 ### 以作图为例
 
-- 时序图（sequence）
+**时序图（sequence）**
 
 Typora 通过 [js-sequence-diagram插件](https://bramp.github.io/js-sequence-diagrams/) 支持了sequence 图，比如我画一个简单的 TCP 三次握手的时序图。
 
-```sequence
-Client -> Server: TCP 第一次握手
-Server -> Client: TCP 第二次握手
-Client -> Server: TCP 第三次握手
-```
-
-
+![sequence demo](sequence.png)
 
 
 
 实现代码如下，快捷方式就是打 " ``` "  + "sequence" + 回车  
 
+
+
 ```markdown
-​```sequence
 Client -> Server: TCP 第一次握手
 Server -> Client: TCP 第二次握手
 Client -> Server: TCP 第三次握手
-​```
 ```
 
-- 流程图（flowchart）
+
+
+**流程图（flowchart）**
 
 Typora 通过 [flowchart.js插件](http://flowchart.js.org/) 支持了sequence 图。举个简单的例子，如下。
 
-```flow
-st=>start: 程序开始
-op=>operation: 进行操作
-cn=>condition: 判断对错?
-ed=>end: 结束
+![flowchart demo](flowchart.png)
 
-st->op->cn(yes)->ed
-cn(no)->op
-```
+
 
 代码如下
 
+
+
 ``` markdown
-​```flow
 st=>start: 程序开始
 op=>operation: 进行操作
 cn=>condition: 判断对错?
@@ -77,39 +70,25 @@ ed=>end: 结束
 
 st->op->cn(yes)->ed
 cn(no)->op
-​```
 ```
 
-- 脑图（mind map）
+
+
+
+
+**脑图（mind map）**
 
 Typora 通过 [mermaid 插件](https://mermaid-js.github.io/mermaid/#/) 支持了sequence 图，这个插件很强大，也可以画时序图和流程图。举个简单的例子，如下。
 
-```mermaid
-graph LR
-A(Java后端技术栈) --> B(编程基础)
-B --> b0(数据结构)
-B --> b1(操作系统)
-B --> b2(计算机网络)
-B --> b3(编译原理)
-B --> b4(计算机组成原理)
+![mind map demo](mindmap.png)
 
-A --> C(编程工具)
-C --> a0(Intellij IDEA)
-C --> a1(Eclipse)
-C --> a2(VS Code)
-C --> a3(编辑器 + 编译器)
 
-A --> D(开发框架)
-D --> d0(Spring)
-D --> d1(Spring Boot)
-D --> d2(Spring Cloud)
-D --> d3(Dubbo)
-```
 
 实现代码如下
 
+
+
 ```markdown
-​```mermaid
 graph LR
 A(Java后端技术栈) --> B(编程基础)
 B --> b0(数据结构)
@@ -129,7 +108,6 @@ D --> d0(Spring)
 D --> d1(Spring Boot)
 D --> d2(Spring Cloud)
 D --> d3(Dubbo)
-​```
 ```
 
 
