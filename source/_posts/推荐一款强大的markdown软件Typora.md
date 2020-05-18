@@ -1,16 +1,16 @@
-## Typora
+---
+title: 推荐一款强大的markdown软件Typora
 
-### 什么是 Typora 呢？
+tags: markdown
+---
 
 引用一下[官网](https://www.typora.io/)的介绍
-
-> Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
+Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
 
 <!-- more -->
 
-百度翻译下
-
-> Typora给你一个读者和作家的无缝体验。它删除了预览窗口、模式切换程序、标记源代码的语法符号以及所有其他不必要的干扰。相反，它提供了一个真正的实时预览功能，帮助您专注于内容本身。
+百度翻译如下
+Typora给你一个读者和作家的无缝体验。它删除了预览窗口、模式切换程序、标记源代码的语法符号以及所有其他不必要的干扰。相反，它提供了一个真正的实时预览功能，帮助您专注于内容本身。
 
 百度翻译的有点蹩脚，大致意思懂了就行。核心意思就是，**Typora 是一个可以实时渲染的markdown软件**，使用者可以在一边写markdown一边看到效果，而不是像 MarkdownPad 等其他 markdown 编辑软件那样分成两块，一块是源码区，一块是效果区。
 
@@ -58,7 +58,7 @@ Typora 通过 [flowchart.js插件](http://flowchart.js.org/) 支持了sequence �
 
 
 
-代码如下
+实现代码如下，快捷方式就是打 " ``` "  + "flow" + 回车  
 
 
 
@@ -84,7 +84,7 @@ Typora 通过 [mermaid 插件](https://mermaid-js.github.io/mermaid/#/) 支持�
 
 
 
-实现代码如下
+实现代码如下，快捷方式就是打 " ``` "  + "mermaid" + 回车  
 
 
 
@@ -104,12 +104,12 @@ C --> a2(VS Code)
 C --> a3(编辑器 + 编译器)
 
 A --> D(开发框架)
-D --> d0(Spring)
-D --> d1(Spring Boot)
-D --> d2(Spring Cloud)
-D --> d3(Dubbo)
+D --> d0(Spring Boot)
+D --> d1(Spring Cloud)
+D --> d2(Dubbo)
 ```
 
 
 
 总之作为一名程序员，熟悉 markdown 是必须的事情，熟练使用 markdown 无疑会带来很多便利，增加很多效率。
+
