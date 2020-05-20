@@ -80,7 +80,7 @@ cn(no)->op
 
 Typora 通过 [mermaid 插件](https://mermaid-js.github.io/mermaid/#/) 支持了sequence 图，这个插件很强大，也可以画时序图和流程图。举个简单的例子，如下。
 
-![mind map demo](mindmap.png)
+![mind map demo](mindmap1.png)
 
 
 
@@ -108,6 +108,37 @@ D --> d0(Spring Boot)
 D --> d1(Spring Cloud)
 D --> d2(Dubbo)
 ```
+
+
+
+**排版（layout）**
+
+还有写作时候需要的排版，因为 Typora 相当于一个浏览器所以可以使用 html 的语法，所以基本上是熟悉 html 可以实现任何你想要实现的排版效果。下面举一个图片并列排版的例子。
+
+因为 markdown 默认的插入图片的代码无法调整图片的大小和位置，所以可以采用 html 中的 img 标签。
+
+```markdown
+![...](....)
+```
+
+效果图如下
+
+![pic_layout_demo](pic_layout_demo.png)
+
+上述效果实现代码如下
+
+```html
+<figure class="half">
+    <img src="C:/Users/jeave/Desktop/pic/123.jpg" width="350px" height="300px">
+     <img src="C:/Users/jeave/Desktop/pic/vs.jpg" width="350px" height="300px">
+</figure>
+<figure class="half">
+    <img src="C:/Users/jeave/Desktop/pic/image.jpg" width="350px" height="300px">
+     <img src="C:/Users/jeave/Desktop/pic/vs1.jpg" width="350px" height="300px">
+</figure>
+```
+
+通过 figure 标签的 half 样式可以达到图片并列排版的目的，中间的文字在空行里打即可。
 
 
 
