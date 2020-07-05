@@ -1,6 +1,5 @@
 ---
 title: 我的个人博客
-date: 2020-03-26
 tags: 默认hexo模板landscape
 ---
 使用 gitee pages 或者 github pages 挂自己的博客的主要初衷，就是因为简洁可定制。
