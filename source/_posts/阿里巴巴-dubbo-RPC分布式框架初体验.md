@@ -13,6 +13,7 @@ Dubbo 阿里已经捐给了  Apache 基金会，作为顶级开源项目 Apache 
 ##### 开发环境
 
 - OS: Windows10
+- JDK: Zulu OpenJDK 1.8
 - IDE: Intellij IDEA 2018.2
 - Build: Maven 3.3.9
 - Framework: Spring Boot 2.0.1.RELEASE (内嵌Tomcat)
